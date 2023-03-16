@@ -5,3 +5,12 @@
 .btn-like {
     border: 1px solid yellow; 
 }
+
+img {
+    object-fit: fill; 
+    height: 400px; 
+    width: 200px; 
+    padding: 0px; 
+}
+
+
