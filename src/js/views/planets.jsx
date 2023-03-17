@@ -7,8 +7,7 @@ import "../../styles/people.css";
 
 const Planets = () => {
 
-    const params = useParams(); 
-    const id = params.id; 
+    const {id} = useParams(); 
     
     const [planets, setPlanets] = useState({});
 

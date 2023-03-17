@@ -7,8 +7,7 @@ import "../../styles/people.css";
 
 const Vehicles = () => {
 
-    const params = useParams(); 
-    const id = params.id; 
+    const {id} = useParams(); 
     
     const [vehicle, setVehicles] = useState({});
 

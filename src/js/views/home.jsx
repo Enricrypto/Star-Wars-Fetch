@@ -37,10 +37,12 @@ const Home = () => {
 
 	const navigate = useNavigate();
 
-	const IMG_PEOPLE = "https://mui.today/__export/1621346854469/sites/mui/img/2021/05/18/luke-skywalker.jpg_882530974.jpg"; 
-	const IMG_VEHICLE = "https://www.denofgeek.com/wp-content/uploads/2019/12/x-wing.jpg?w=1024"; 
-	const IMG_PLANET = "https://static.wikia.nocookie.net/9a4cef88-cb06-464f-8084-27c2c0c1091f"; 
+	const IMG_PEOPLE = (id) => `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`; 
+	const IMG_VEHICLE = (id) => ` https://starwars-visualguide.com/assets/img/planets/${id}.jpg`; 
+	const IMG_PLANET = (id) => `https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`; 
 	
+	// const IMG_FIXED =  "https://starwars-visualguide.com/assets/img/planets/4.jpg"; 
+
 	const handleClickPeople = (id) => {
 		navigate(`/people/${id}`)
 	};
@@ -59,7 +61,7 @@ const Home = () => {
 			<div className="text-center mt-5 d-flex" >
 				{peopleList.map((people) => {
 					return (
-						<Card key = {people.uid} element = {people} handler = {handleClickPeople} img = {IMG_PEOPLE}/> 
+						<Card key = {people.uid} element = {people} handler = {handleClickPeople} img = {IMG_PEOPLE(people.uid)}/> 
 					)
 				})}
 			</div>
@@ -67,7 +69,7 @@ const Home = () => {
 			<div className="text-center mt-5 d-flex" >
 			{vehiclesList.map((vehicle) => {
 					return (
-						<Card key = {vehicle.uid} element = {vehicle} handler = {handleClickVehicles} img= {IMG_VEHICLE}/> 
+						<Card key = {vehicle.uid} element = {vehicle} handler = {handleClickVehicles} img= {IMG_VEHICLE(vehicle.uid)}/> 
 					)
 				})}
 			</div>
@@ -75,7 +77,7 @@ const Home = () => {
 			<div className="text-center mt-5 d-flex" >
 			{planetsList.map((planet) => {
 					return (
-						<Card key = {planet.uid} element = {planet} handler = {handleClickPlanets} img = {IMG_PLANET}/> 
+						<Card key = {planet.uid} element = {planet} handler = {handleClickPlanets} img = {IMG_PLANET(planet.uid)}/> 
 					)
 				})}
 			</div>	

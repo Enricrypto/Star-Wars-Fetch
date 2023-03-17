@@ -1,4 +1,3 @@
-
 export const getData = async (aux, id) => {
     const BASE_URL = "https://swapi.tech/api/"; 
     try { 

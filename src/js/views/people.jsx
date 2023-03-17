@@ -7,8 +7,7 @@ import "../../styles/people.css";
 
 const Detail = () => {
 
-    const params = useParams(); 
-    const id = params.id; 
+    const {id} = useParams(); 
     
     const [character, setCharacter] = useState({});
 

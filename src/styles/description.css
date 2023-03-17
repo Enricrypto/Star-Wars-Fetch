@@ -2,6 +2,9 @@
     color: black; 
 }
 
-img {
+.description-image {
     padding-left: 15px; 
+    height: 400px; 
+    width: 600px; 
 }
+
