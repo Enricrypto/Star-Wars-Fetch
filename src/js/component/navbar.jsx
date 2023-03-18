@@ -1,7 +1,6 @@
 import React, {useContext} from "react";
 import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../../styles/navbar.css";
 
 
@@ -20,7 +19,6 @@ const Navbar = () => {
 					<button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 						Favorites
 					</button>
-					<FontAwesomeIcon icon="coffee" />
 					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 						{store.favorites.map((elem, index) => <li key={index}>{elem} <span><i onClick={() => actions.deleteFavorites(index)}>🗑️</i></span></li>)}
 					</ul>
